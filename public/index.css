@@ -321,20 +321,20 @@ a{
 
 /* Project Background Image */
 #project1{
-    background-image: url('./images/projects/HappyHours.png');
+    background-image: url('../images/projects/HappyHours.png');
     margin-right: 10rem; 
     background-position:center;
 }
 #project2{
-    background-image: url('./images/projects/StudyNotion.png');
+    background-image: url('../images/projects/StudyNotion.png');
     margin-left: 10rem;   
 }
 #project3{
-    background-image: url('./images/projects/HelpingHands.png');
+    background-image: url('../images/projects/HelpingHands.png');
     margin-right: 10rem; 
 }
 #project4{
-    background-image: url('./images/projects/MindAppraisal.png');
+    background-image: url('../images/projects/MindAppraisal.png');
     margin-left: 10rem;
 }
 
