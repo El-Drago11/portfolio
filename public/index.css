@@ -18,7 +18,8 @@ a{
     height: max-content;
 }
 .container{
-    margin: 0 auto;  
+    margin: 0 auto; 
+    width: 100lvw; 
 }
 
 .navbar {
@@ -32,25 +33,31 @@ a{
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 2rem;
+    font-size: 3lvw;
     font-weight: bold;
-    text-shadow: 0.1rem 0.1rem rgb(91, 89, 89);
 }
 .logo{
-    height: 6rem;
-    width: 6rem;
+    height: 10lvh;
+    width: 10lvh;
 }
 .navItem{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 2lvw;
     gap: 1.5rem;
 }
 .navItem .navText a:hover{
     color: rgb(155, 12, 88);
     font-weight: bold;
     transition: 0.5s;
+}
+
+@media screen and (max-width:600) {
+    .navText a{
+        font-size: 16lvh;
+        font-weight: 900;
+    }
 }
 
 .HeroSection{
@@ -149,10 +156,6 @@ a{
     z-index: 9;
 }
 
-@media screen and (max-width:520px) {
-    
-}
-
 .myProfile .icon-zigzak{
     top: 0;
     animation: zizagAnime 5s linear infinite;
@@ -239,7 +242,7 @@ a{
     justify-content: center;
     align-items: center;
     background-color:rgb(220, 220, 220);
-    margin-top: 6rem;
+    margin-top: 12lvh;
     padding: 5rem;
     width: 100%;
     height: max-content;
@@ -358,6 +361,9 @@ a{
     margin-left: 4rem;
 }
 @media screen and (max-width : 650px) {
+    .project-Container{
+        margin-top: 6lvh;
+    }
     .project-card{
         padding: 10lvh;
     }
@@ -383,7 +389,7 @@ a{
     #project4{
         margin-left: 0rem;
     }
-    .btn-grp .hireMeBtn{
+    .hireMeBtn{
         font-size: 5lvw;
         margin-top: 1lvh;
         margin-bottom: 1lvh;
@@ -410,8 +416,8 @@ a{
     color: rgb(211, 210, 210);
     right: 0;
     bottom: 0;
-    font-size: 8rem;
-    transform: translateY(7rem);
+    font-size: 18lvh;
+    transform: translateY(12lvh) translateX(-2lvw);
 }
 
 .skills-container-left{
@@ -442,38 +448,43 @@ a{
     width: 45lvw;
     position: relative;
 }
-.skills-container-right .MyStack{
-    height: auto;
-    width: 10lvh;
+.Mystack-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .skills-container-blob{
     position: absolute;
-    translate: 5rem 3rem;
+}
+.skills-container-blob img{
+    width: 20lvw;
     animation: blobMovement 5s linear infinite;
+
 }
 @keyframes blobMovement{
     0%{
-        transform: translateX(-20lvw) translateY(2lvw) rotate(0deg);
+        transform: translateX(-10lvw) translateY(2lvw) rotate(0deg);
     }
     25%{
-        transform: translateX(-10lvw) translateY(-1lvw) rotate(90deg);
+        transform: translateX(-5lvw) translateY(-1lvw) rotate(90deg);
     }
     50%{
         transform: translateX(0lvw) translateY(2lvw) rotate(180deg);
     }
     75%{
-        transform: translateX(-10lvw) translateY(-1lvw) rotate(270deg);
+        transform: translateX(-5lvw) translateY(-1lvw) rotate(270deg);
     }
     100%{
-        transform: translateX(-20lvw) translateY(2lvw) rotate(360deg);
+        transform: translateX(-10lvw) translateY(2lvw) rotate(360deg);
     }
 }
 
 .MyStack{
-    height: 5rem;
-    width: 5rem;
-    margin-right: 4rem;
-    margin-top: 1rem;
+    height: auto;
+    width: 10lvh;
+    margin-right: 4lvw;
+    margin-top: 1lvh;
     transform: scale(0.9);
     transition: all linear 0.5s;
 }
@@ -481,9 +492,21 @@ a{
     transform: scale(1.1);
 }
 
-/* @media screen and (max-width:) {
-    
-} */
+@media screen and (max-width:700px) {
+    .skill-container{
+        flex-direction: column;
+        padding: 1lvw;
+    }
+    .skills-container-left , .skills-container-right{
+        width: 100lvw;
+    }
+    .skill-faded-text{
+        font-size: 15lvw;
+    }
+    .MyStack{
+        width: 7lvh;
+    }
+}
 
 /* Message Me */
 .contact-me{
@@ -549,6 +572,7 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 7rem;
+    width: 100lvw;
 }
 
 .footer-container .faded-text{
@@ -578,7 +602,11 @@ a{
     color: #e84949;
 }
 
-/* Media Query */
-@media screen and (max-width: 1140) {
-    
+@media screen and (max-width:750px) {
+    .link-wrapper{
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
 }
