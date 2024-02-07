@@ -240,11 +240,11 @@
                     <div><a href="#contactUser">Contact me</a></div>
                 </div>
                 <div class="link-wrapper"> 
-                    <div><a href="#instagram"><i class="fa-brands fa-instagram fa-icons"></i></a></div>
-                    <div><a href="#skills"><i class="fa-brands fa-linkedin-in fa-icons"></i></a></div>
-                    <div><a href="#contactUser"><i class="fa-brands fa-github fa-icons"></i></a></div>
-                    <div><a href="#projects"><i class="fa-brands fa-twitter fa-icons"></i></a></div>
-                    <div><a href="#projects"><i class="fa-regular fa-envelope fa-icons"></i></a></div>
+                    <div><a href="https://www.instagram.com/invites/contact/?i=1njuwkoce9j99&utm_content=2vff314"><i class="fa-brands fa-instagram fa-icons"></i></a></div>
+                    <div><a href="https://www.linkedin.com/in/rahul-rawat-0360a7252"><i class="fa-brands fa-linkedin-in fa-icons"></i></a></div>
+                    <div><a href="https://github.com/El-Drago11"><i class="fa-brands fa-github fa-icons"></i></a></div>
+                    <div><a href="#contactUser"><i class="fa-brands fa-twitter fa-icons"></i></a></div>
+                    <div><a href="#contactUser"><i class="fa-regular fa-envelope fa-icons"></i></a></div>
                 </div>
             </div>
         </footer>
@@ -283,6 +283,10 @@
             emailjs.send("service_rm3m0sh","template_ldehyvy",params)
             .then(alert(`Thank You for the contact 
 Will get back to you as soon as Possible`))
+                document.querySelector('#name').value =  "",
+                document.querySelector('#emailId').value = "",
+                document.querySelector('#subject').value = "",
+                document.querySelector('#Message').value = ""
         }
         form.addEventListener('submit',sendMessage)
 
