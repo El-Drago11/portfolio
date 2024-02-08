@@ -280,6 +280,13 @@
                 subject : document.querySelector('#subject').value,
                 message : document.querySelector('#Message').value
             }
+            if(!params.name || !params.email || !params.subject || !params.message){
+                return alert("Please fill all values")
+            }
+            const isEmailValid = /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/.test(params.email);
+            if(!isEmailValid){
+                return alert("Email Invalid");
+            }
             emailjs.send("service_rm3m0sh","template_ldehyvy",params)
             .then(alert(`Thank You for the contact 
 Will get back to you as soon as Possible`))
