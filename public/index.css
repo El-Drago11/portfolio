@@ -50,7 +50,7 @@ a{
 .navItem .navText a:hover{
     color: rgb(155, 12, 88);
     font-weight: bold;
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 @media screen and (max-width:600) {
