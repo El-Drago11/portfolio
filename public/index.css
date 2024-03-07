@@ -226,6 +226,22 @@ a{
         transform: translateY(1rem);
     }
 }
+.codingPlatforms{
+    display: flex;
+    flex-direction: row;
+    gap: 2lvw;
+    margin-top: 2lvh;
+}
+.codingURL{
+    object-fit: contain;
+    height: 6lvh;
+}
+
+.codingURL:hover{
+    scale: 1.4;
+    transition:1s ease;
+}   
+
 
 /* Project */
 
@@ -234,7 +250,7 @@ a{
     font-size: 4rem;
     font-weight:900;
     text-align: center;
-
+    border-radius: 50%;
 }
 .project-Container{
     display: flex;
