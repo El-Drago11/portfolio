@@ -302,6 +302,9 @@ a{
     transition: 0.4s;
     border-radius: 2rem;
 }
+.project-odd::before{
+    transform-origin: right !important;
+}
 .project-card:hover::before{
     transform: scaleX(1);
 }
