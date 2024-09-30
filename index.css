@@ -7,9 +7,13 @@
   font-family: "Be Vietnam Pro", sans-serif;
   scroll-behavior: smooth;
 }
+body{
+    background-color: #131010;
+    color: white;
+}
 a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: lighter;
 }
 
@@ -35,6 +39,7 @@ a{
     align-items: center;
     font-size: 3lvw;
     font-weight: bold;
+    user-select: none;
 }
 .logo{
     height: 10lvh;
@@ -48,7 +53,7 @@ a{
     gap: 1.5rem;
 }
 .navItem .navText a:hover{
-    color: rgb(155, 12, 88);
+    color: rgb(241, 12, 12);
     font-weight: bold;
     transition: 0.1s;
 }
@@ -93,6 +98,7 @@ a{
     .aboutMe .ability{
         position: absolute;
         top: -10lvh;
+        width: 100vw !important;
     }
     .myProfile .icons img{
         display: none;
@@ -628,4 +634,14 @@ a{
         justify-content: center;
         align-items: center;
     }
+}
+
+
+#cursor{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: fixed;
+    z-index: 99999;
 }
