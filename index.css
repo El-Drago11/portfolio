@@ -11,6 +11,7 @@ body{
     background-color: #131010;
     color: white;
 }
+
 a{
     text-decoration: none;
     color: white;
@@ -29,9 +30,11 @@ a{
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 .logoContainer{
     display: flex;
@@ -42,8 +45,8 @@ a{
     user-select: none;
 }
 .logo{
-    height: 10lvh;
-    width: 10lvh;
+    height: 9lvh;
+    width: 9lvh;
 }
 .navItem{
     display: flex;
@@ -81,8 +84,10 @@ a{
     font-weight: bold;
     position: absolute;
     left: 0rem;
-    bottom: -6.5rem;
+    bottom: -12lvh;
     margin-left: 2rem;
+    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
 .aboutMe{
     width: 40%;
@@ -90,6 +95,16 @@ a{
 @media screen and (max-width: 650px) {
     .faded-text{
         display: none;
+    }
+    
+    .navItem{
+        font-size: 3lvw;
+        gap: 0.5rem;
+    }
+
+    .navbar{
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .aboutMe h1{
@@ -103,7 +118,11 @@ a{
     .myProfile .icons img{
         display: none;
     }
+    #Experience{
+        margin-top: 0 !important;
+    }
 }
+
 .ability{
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -443,6 +462,8 @@ a{
     bottom: 0;
     font-size: 18lvh;
     transform: translateY(12lvh) translateX(-2lvw);
+    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .skills-container-left{
@@ -612,7 +633,7 @@ a{
     gap:1.5rem;
 }
 
-.link-wrapper a{
+.link-wrapper>div> a{
     color: white;
     font-size: 1rem;
 }
@@ -644,4 +665,107 @@ a{
     background-color: red;
     position: fixed;
     z-index: 99999;
+}
+
+@media screen and (max-width:425px) {
+    .footer-container{
+        flex-direction: column !important;
+        padding: 4rem !important;
+        justify-content: space-around !important;
+    }
+    .link-wrapper {
+        flex-direction: row !important;
+    }
+}
+
+/* Experience section */
+
+#Experience{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 150px;
+}
+
+
+.HandsOn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:50px;
+}
+
+.ScrollContent{
+    /* background-color: #c840db; */
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.workedOn>svg{
+    border-radius: 50%;
+}
+.workedOn>img{
+    background-color: black;
+    color: black;
+}
+
+.company{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    width: 97%;
+    /* gap: 100px; */
+}
+
+.about_experince {
+    transition: transform 1s ease, box-shadow 1s ease;
+    background-color: white;
+    color: black;
+    padding: 50px;
+    border-radius: 30px;
+    width: 50%;
+}
+
+.about_experince:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px rgb(209, 207, 207);
+}
+
+.heading{
+    color: #e84949;
+    /* text-align: center; */
+    margin-bottom: 10px;
+}
+
+.keyIntegration{
+    color: #e84949;
+    margin: 10px 0px;
+}
+
+#companyLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#companyLogo>img{
+    object-fit: contain;
+    width: 99%;
+}
+
+.project-section-Work{
+    font-size: 3rem !important;
+}
+
+@media screen and (max-width:854px) {
+    .company{
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .about_experince{
+        width: 90% !important;
+    }
 }

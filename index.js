@@ -56,28 +56,33 @@ headerTimeline.from("#logoImage",{
 
 headerTimeline.from(".logoText",{
     opacity:0,
-    y:-50,
-    duration:0.5
 })
 
 headerTimeline.from(".navText",{
     opacity:0,
     y:-50,
-    duration:1,
-    stagger:0.5,
-})
-
-headerTimeline.from("#data-aboutMe",{
-    opacity:0,
-    x : -1500,
-    duration:1,
-    ease:"slow(0.7,0.7,false)"
+    stagger:0.1,
 })
 headerTimeline.from("#data-myProfileImage",{
     opacity:0,
     x : 1500,
-    duration:1
+    duration:1,
 })
+headerTimeline.from("#data-aboutMe",{
+    opacity:0,
+    x : -100,
+})
+headerTimeline.from(".ScrollContent",{
+    opacity:0,
+})
+
+// if (window.matchMedia("(max-width: 650px)").matches) {
+//     headerTimeline.from("#projects",{
+//         opacity:0,
+//         y:-100,
+//         duration:1,
+//     })
+// }
 
 
 //---------------gsap for fadded text-------------------------------------------------
@@ -103,7 +108,7 @@ fadedName.innerHTML = NewfadedName;
 headerTimeline.from(".data-NewFadeGsap", {
     opacity: 0,
     y: -100,
-    stagger: 0.2,
+    stagger: 0.1,
 });
 
 
@@ -113,8 +118,8 @@ var enterCursor = document.querySelector("body")
 
 enterCursor.addEventListener("mousemove",function(dest){
     gsap.to("#cursor",{
-        x:dest.x,
-        y:dest.y,
+        x:dest.x-20,
+        y:dest.y-20,
         duration:1,
         ease:"back.out"
     })
@@ -140,18 +145,30 @@ projectsValueArray.forEach(element => {
 projects.innerHTML = NewprojectsValue;
 
 // Initial animation when page loads
-headerTimeline.from("#projects", {
-    opacity: 0,
-    y: -100,
+// if (window.matchMedia("(min-width: 650px)").matches) {
+// gsap.from("#projects", {
+//     opacity:0,
+//     y:-100,
+//     scrollTrigger:{
+//         trigger:"#projects",
+//         scroller:"body",
+//         start:"top 50%",
+//         end: "top 20%",
+//         scrub:true,
+//     }
+// });
+// }
+gsap.from("#projects", {
+    opacity:0,
+    y:-100,
     scrollTrigger:{
         trigger:"#projects",
-        scoller:"body",
-        start:"top 90%",
-        end: "top 50%",
+        scroller:"body",
+        start:"top 50%",
+        end: "top 20%",
         scrub:true,
     }
 });
-
 
 gsap.from("#project1",{
     opacity:0,
@@ -273,4 +290,51 @@ gsap.from(".formdata",{
         scrub:true,
     },
     stagger:1
+})
+
+//experience section
+window.addEventListener("wheel",function(dest){
+    if(dest.deltaY>0){
+        gsap.to('.workedOn_arrow svg',{
+            rotate:180,
+        })
+    }else{
+        gsap.to('.workedOn_arrow svg',{
+            rotate:0,
+        })
+    }
+})
+
+gsap.from(".about_experince",{
+    opacity:0,
+    x:1500,
+    scrollTrigger:{
+        trigger:".about_experince",
+        scoller:'body',
+        start:"top 70%",
+        end:"top 40%",
+        scrub:true,
+    }
+})
+
+gsap.from("#work-experience",{
+    opacity:0,
+    x:-1500,
+    scrollTrigger:{
+        trigger:"#work-experience",
+        scoller:'body',
+        start:"top 90%",
+        end:"top 40%",
+        scrub:true,
+    }
+})
+gsap.from(".companyImage",{
+    opacity:0,
+    scrollTrigger:{
+        trigger:".companyImage",
+        scoller:'body',
+        start:"top 70%",
+        end:"top 40%",
+        scrub:true,
+    }
 })
