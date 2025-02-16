@@ -460,7 +460,7 @@ a{
     color: rgb(211, 210, 210);
     right: 0;
     bottom: 0;
-    font-size: 18lvh;
+    font-size: 11lvh;
     transform: translateY(12lvh) translateX(-2lvw);
     mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
@@ -483,8 +483,9 @@ a{
 .skill-subHeading{
     margin-top: 1.5rem;
 }
-.skill-subHeading-data{
+.skill-subHeading-data,.discription{
     margin-top: 1rem;
+    font-size: large;
 }
 .skills-container-right{
     display: flex;
@@ -538,16 +539,16 @@ a{
     transform: scale(1.1);
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:992px) {
     .skill-container{
         flex-direction: column;
-        padding: 1lvw;
+        padding: 2lvw;
     }
     .skills-container-left , .skills-container-right{
         width: 100lvw;
     }
     .skill-faded-text{
-        font-size: 15lvw;
+        font-size: 11lvw;
     }
     .MyStack{
         width: 7lvh;
@@ -570,7 +571,7 @@ a{
     color: #e84949;
 }
 .contact-me-sub-heading{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color:rgb(117, 117, 117);
     text-transform: capitalize;
