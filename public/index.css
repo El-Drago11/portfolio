@@ -787,4 +787,5 @@ a{
 .key-feature{
     font-weight:900 !important; 
     text-transform:capitalize  !important;
+    color:rgb(233, 233, 2) !important;
 }
