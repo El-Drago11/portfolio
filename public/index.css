@@ -346,7 +346,7 @@ a{
 .projetct-skill-container{
     display: flex;
     justify-content: flex-start;
-    gap: 2lvw;
+    gap: 1lvw;
     flex-wrap: wrap;
 }
 .project-number{
@@ -397,7 +397,7 @@ a{
     margin-left: 4rem;   
 }
 #project3{
-    background-image: url('images/projects/HelpingHands.png');
+    background-image: url('images/projects/banana.png');
     margin-right: 4rem; 
 }
 #project4{
@@ -409,14 +409,14 @@ a{
         margin-top: 6lvh;
     }
     .project-card{
-        padding: 10lvh;
+        padding: 6lvh;
     }
     .project-subHeading{
         display: none;
     }
     .project-heading{
         font-size: 7lvw;
-        margin-top: 0;
+        margin-top: 2lvh;
     }
     .project-number{
         font-size: 15lvw;
@@ -781,4 +781,9 @@ a{
     #companyLogo{
         width: 90% !important;
     }
+}
+
+.key-feature{
+    font-weight:900 !important; 
+    text-transform:capitalize  !important;
 }
