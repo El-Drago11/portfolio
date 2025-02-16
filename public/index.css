@@ -378,7 +378,7 @@ a{
 }
 
 .btn-grp .linkIcons{
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     color: azure;
     font-size: 1.5rem;
 }
@@ -434,13 +434,13 @@ a{
         margin-left: 0rem;
     }
     .hireMeBtn{
-        font-size: 5lvw;
+        font-size: 4lvw;
         margin-top: 1lvh;
         margin-bottom: 1lvh;
         border-radius: 1lvh;
         color: aliceblue;
         padding: 1lvw;
-        width: 30lvw;
+        width: 25lvw;
     }
 }
 
